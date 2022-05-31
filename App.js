@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
+import {Stylesheets, Text, View, TouchableOpacity, TextInput } from 'react-native';
 import { useState } from 'react';
+import  Estilos  from './componentes/estilos/styles.js'
 
 const App = () =>{
   const [number, onChangeNumber] = useState(null)
@@ -9,19 +10,19 @@ const App = () =>{
   setCont(prevCont => prevCont + 1)
 
   return (
-    <View style={styles.container}>
-      <View style={styles.countContainer}>
+    <View style={Estilos.container}>
+      <View style={Estilos.countContainer}>
       <Text>Count: {count}</Text>
       </View>
       <TextInput 
       keyboardType='numeric' 
-      style={styles.input}
+      style={Estilos.input}
       onChangeText={onChangeNumber}
 
       />
     
     <TouchableOpacity 
-      style={styles.button}
+      style={Estilos.button}
       onPress={onPress}
     >
       <Text>Pressione</Text>
@@ -30,26 +31,4 @@ const App = () =>{
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 10,
-    justifyContent: 'center',
-  },
-  button:{
-    alignItems:'center',
-    padding:10,
-    backgroundColor:'#DDDDDD'
-  },
-  countContainer:{
-    alignItems:'center',
-    padding:10
-  },
-  input:{
-    height:40,
-    margin:12,
-    borderWidth:2,
-    padding :10
-  }
-});
 export default App
