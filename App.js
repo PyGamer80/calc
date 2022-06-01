@@ -24,7 +24,7 @@ export default function App(){
       />
 
       <View style={Estilos.cabeçalho}>
-      <Text style={Estilos.estilotexto}>Calculadora KVA => A</Text>
+      <Text style={Estilos.estilotexto}>Calculadora KVA - A</Text>
       </View>
       <View style={Estilos.num1}>
       <TextInput
